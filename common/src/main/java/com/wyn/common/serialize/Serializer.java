@@ -1,4 +1,4 @@
-package com.wyn.serialize;
+package com.wyn.common.serialize;
 
 /**
  * 序列化工具

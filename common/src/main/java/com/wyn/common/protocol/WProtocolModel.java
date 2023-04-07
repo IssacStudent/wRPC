@@ -1,4 +1,4 @@
-package com.wyn.protocol;
+package com.wyn.common.protocol;
 
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Data
 @Builder
-public class WProtocol implements Serializable {
+public class WProtocolModel implements Serializable {
 
     private String clazz;
 

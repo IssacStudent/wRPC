@@ -1,8 +1,7 @@
-import com.wyn.protocol.WProtocol;
-import com.wyn.serialize.KryoSerializer;
+import com.wyn.common.protocol.WProtocolModel;
+import com.wyn.common.serialize.KryoSerializer;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 public class SerializerTest {
@@ -12,8 +11,8 @@ public class SerializerTest {
         String[] strings = {"s","s1"};
         System.out.println(Arrays.toString(bytes));
         KryoSerializer kryoSerializer = new KryoSerializer();
-        kryoSerializer.setClazz(WProtocol.class);
-        WProtocol protocol = WProtocol.builder()
+        kryoSerializer.setClazz(WProtocolModel.class);
+        WProtocolModel protocol = WProtocolModel.builder()
                 .clazz("clazztest")
                 .method("methodzz")
                 .argTypes(Arrays.asList(new String[]{"asd", "asd"}))
@@ -22,7 +21,7 @@ public class SerializerTest {
         System.out.println(protocol.toString());
         System.out.println(Arrays.toString(bytes));
         System.out.println("=====================================");
-        WProtocol testSerialization1 = kryoSerializer.deserialize(bytes);
+        WProtocolModel testSerialization1 = kryoSerializer.deserialize(bytes);
         System.out.println(testSerialization1.toString());
         System.out.println(Arrays.toString(bytes));
         System.out.println();

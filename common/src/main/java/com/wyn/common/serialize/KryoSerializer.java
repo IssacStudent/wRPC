@@ -1,4 +1,4 @@
-package com.wyn.serialize;
+package com.wyn.common.serialize;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
