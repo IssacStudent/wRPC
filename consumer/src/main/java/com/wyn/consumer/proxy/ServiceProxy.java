@@ -40,6 +40,7 @@ public class ServiceProxy implements InvocationHandler {
         byte[] resultData = new byte[MAX_PACKAGE_SIZE];
         KRYO_SERIALIZER.serialize(protocolModel, inputData);
         resultData = ClientRemoter.client.getDataRemote(inputData);
-        return KRYO_SERIALIZER.deserialize(resultData);
+        protocolModel = KRYO_SERIALIZER.deserialize(resultData);
+        return protocolModel.getResult();
     }
 }

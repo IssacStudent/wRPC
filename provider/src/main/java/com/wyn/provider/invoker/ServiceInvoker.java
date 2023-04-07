@@ -30,7 +30,7 @@ public class ServiceInvoker {
             if (obj == null) {
                 return null;
             }
-            return method.invoke(obj, protocolModel.getArgs());
+            return method.invoke(obj, protocolModel.getArgs().toArray());
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
             return null;

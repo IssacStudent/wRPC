@@ -12,5 +12,28 @@
     <groupId>com.wyn</groupId>
     <artifactId>rpc-demo</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.wyn</groupId>
+            <artifactId>provider</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wyn</groupId>
+            <artifactId>consumer</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wyn</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wyn</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

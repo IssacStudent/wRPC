@@ -35,7 +35,8 @@ public class ServerExecutor implements Runnable {
             int len = is.read(data);
             WProtocolModel protocolModel = KRYO_SERIALIZER.deserialize(data, 0, len);
             Object result = ServiceInvoker.PROXY.process(protocolModel);
-            KRYO_SERIALIZER.serialize(result, resultData);
+            protocolModel.setResult(result);
+            KRYO_SERIALIZER.serialize(protocolModel, resultData);
             os.write(resultData);
             os.flush();
         } catch (IOException e) {

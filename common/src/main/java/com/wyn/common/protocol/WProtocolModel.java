@@ -24,4 +24,6 @@ public class WProtocolModel implements Serializable {
 
     private List<Object> args;
 
+    private Object result;
+
 }
