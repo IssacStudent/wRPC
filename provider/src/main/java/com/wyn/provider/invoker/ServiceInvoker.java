@@ -1,6 +1,6 @@
 package com.wyn.provider.invoker;
 
-import com.wyn.common.protocol.WProtocolModel;
+import com.wyn.common.model.protocol.WProtocolModel;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

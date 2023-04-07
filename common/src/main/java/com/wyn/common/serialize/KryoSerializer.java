@@ -4,8 +4,8 @@ import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.serializers.BeanSerializer;
+import com.wyn.common.interfaces.serialize.Serializer;
 import org.objenesis.strategy.StdInstantiatorStrategy;
-import org.springframework.stereotype.Component;
 
 /**
  * Kryo的序列化工具
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
  * @date 2023年3月30日16:43:11
  * @since <pre>2023/03/30</pre>
  */
-@Component
 public class KryoSerializer implements Serializer {
 
     private Class<?> clazz = null;

@@ -1,4 +1,4 @@
-import com.wyn.common.protocol.WProtocolModel;
+import com.wyn.common.model.protocol.WProtocolModel;
 import com.wyn.common.serialize.KryoSerializer;
 import org.junit.Test;
 

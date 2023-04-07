@@ -1,6 +1,6 @@
 package com.wyn.provider.executors;
 
-import com.wyn.common.protocol.WProtocolModel;
+import com.wyn.common.model.protocol.WProtocolModel;
 import com.wyn.common.serialize.KryoSerializer;
 import com.wyn.provider.invoker.ServiceInvoker;
 

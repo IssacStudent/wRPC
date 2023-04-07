@@ -1,4 +1,4 @@
-package com.wyn.common.serialize;
+package com.wyn.common.interfaces.serialize;
 
 /**
  * 序列化工具
@@ -12,7 +12,7 @@ public interface Serializer {
      * @param t
      * @param bytes
      */
-    public void serialize(Object t,byte[] bytes);
+    void serialize(Object t, byte[] bytes);
 
     /**
      * 序列化
@@ -21,14 +21,14 @@ public interface Serializer {
      * @param offset
      * @param count
      */
-    public void serialize(Object obj, byte[] bytes, int offset, int count);
+    void serialize(Object obj, byte[] bytes, int offset, int count);
 
     /**
      * 反序列化
      * @param bytes -字节数组
      * @return T<T>
      */
-    public <T>T deserialize(byte[] bytes);
+    <T>T deserialize(byte[] bytes);
 
 
     /**
@@ -38,5 +38,5 @@ public interface Serializer {
      * @param count
      * @return
      */
-    public <T>T deserialize(byte[] bytes, int offset, int count);
+    <T>T deserialize(byte[] bytes, int offset, int count);
 }

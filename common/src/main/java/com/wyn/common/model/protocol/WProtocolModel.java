@@ -1,4 +1,4 @@
-package com.wyn.common.protocol;
+package com.wyn.common.model.protocol;
 
 import lombok.Builder;
 import lombok.Data;

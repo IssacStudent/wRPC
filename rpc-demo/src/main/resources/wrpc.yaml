@@ -1,0 +1,4 @@
+provider:
+  server:
+    ip: 192.168.88.10
+    port: 9999
