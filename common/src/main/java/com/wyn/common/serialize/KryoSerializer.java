@@ -26,6 +26,9 @@ public class KryoSerializer implements Serializer {
         this.clazz = clazz;
     }
 
+    /**
+     * 保证线程安全，使用ThreadLocal
+     */
     private final ThreadLocal<Kryo> kryoThreadLocal = ThreadLocal.withInitial(() -> {
         Kryo kryo = new Kryo();
         kryo.register(clazz, new BeanSerializer<>(kryo, clazz));
@@ -40,10 +43,10 @@ public class KryoSerializer implements Serializer {
     private final ThreadLocal<Input> inputThreadLocal = new ThreadLocal<>();
 
     @Override
-    public void serialize(Object o, byte[] bytes) {
+    public void serialize(Object obj, byte[] bytes) {
         Kryo kryo = kryoThreadLocal.get();
         Output output = getOutput(bytes);
-        kryo.writeObjectOrNull(output, o, o.getClass());
+        kryo.writeObjectOrNull(output, obj, obj.getClass());
         output.flush();
     }
 

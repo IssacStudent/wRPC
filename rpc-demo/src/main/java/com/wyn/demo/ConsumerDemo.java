@@ -6,6 +6,6 @@ import com.wyn.consumer.proxy.ServiceProxyFactory;
 public class ConsumerDemo {
     public static void main(String[] args) {
         TestServiceApi testServiceApi = ServiceProxyFactory.getInstance(TestServiceApi.class);
-        System.out.println(testServiceApi.sayHello("Isaac Student"));
+        testServiceApi.printHello("Isaac Student");
     }
 }

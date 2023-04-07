@@ -1,6 +1,6 @@
 package com.wyn.consumer.client;
 
-import com.wyn.common.interfaces.communication.Communication;
+import com.wyn.common.interfaces.communication.Client;
 
 import java.net.InetSocketAddress;
 import java.net.Socket;
@@ -12,7 +12,7 @@ import java.util.Arrays;
  * @date 2023年4月7日10:10:39
  * @since <pre>2023/04/07</pre>
  */
-public class DefaultClientRemoter implements Communication {
+public class DefaultClientRemoter implements Client {
 
     private final InetSocketAddress address;
 

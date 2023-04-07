@@ -1,6 +1,6 @@
 package com.wyn.consumer.proxy;
 
-import com.wyn.common.interfaces.communication.Communication;
+import com.wyn.common.interfaces.communication.Client;
 import com.wyn.common.model.protocol.WProtocolModel;
 import com.wyn.common.serialize.KryoSerializer;
 import com.wyn.common.interfaces.serialize.Serializer;
@@ -78,7 +78,7 @@ public class ServiceProxy implements InvocationHandler {
      * 获得通信组件
      * @return 通信组件
      */
-    private Communication getClientRemoter() {
+    private Client getClientRemoter() {
         URL resourcePath = this.getClass().getClassLoader().getResource("");
         assert resourcePath != null;
         File configFile = new File(resourcePath.getPath().concat("wrpc.yaml"));

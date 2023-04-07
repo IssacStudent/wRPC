@@ -16,14 +16,29 @@ import java.util.List;
 @Builder
 public class WProtocolModel implements Serializable {
 
+    /**
+     * 类名
+     */
     private String clazz;
 
+    /**
+     * 方法名
+     */
     private String method;
 
+    /**
+     * 参数类型数组
+     */
     private List<String> argTypes;
 
+    /**
+     * 参数列表
+     */
     private List<Object> args;
 
+    /**
+     * 返回值
+     */
     private Object result;
 
 }

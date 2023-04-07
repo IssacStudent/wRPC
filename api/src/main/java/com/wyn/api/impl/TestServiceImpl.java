@@ -7,4 +7,9 @@ public class TestServiceImpl implements TestServiceApi {
     public String sayHello(String name) {
         return "Hello, " + name;
     }
+
+    @Override
+    public void printHello(String name) {
+        System.out.println("Hello, " + name);
+    }
 }

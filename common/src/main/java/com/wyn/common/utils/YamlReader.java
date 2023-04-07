@@ -23,11 +23,22 @@ public class YamlReader {
 
     private Yaml yaml;
 
+    /**
+     * 加载属性
+     * @param path 属性路径
+     */
     public void loadProperties(String path) {
         File file = new File(path);
-        this.loadProperties(file);
+        if (file.getName().endsWith("yaml") || file.getName().endsWith("yml")) {
+            this.loadProperties(file);
+        }
+        throw new RuntimeException("Incorrect file types, required: \"yml\" or \"yaml\", but found: " + file.getName());
     }
 
+    /**
+     * 加载属性
+     * @param file 属性文件
+     */
     public void loadProperties(File file) {
         yaml = new Yaml();
         try (InputStream inputStream = new FileInputStream(file)) {
@@ -38,6 +49,11 @@ public class YamlReader {
         }
     }
 
+    /**
+     * 通过key获取value
+     * @param key key
+     * @return value
+     */
     public Object get(String key) {
         if (yaml == null) {
             throw new RuntimeException("Please load yaml by using function: loadProperties(String path) first!");

@@ -4,4 +4,6 @@ public interface TestServiceApi {
 
     String sayHello(String name);
 
+    void printHello(String name);
+
 }

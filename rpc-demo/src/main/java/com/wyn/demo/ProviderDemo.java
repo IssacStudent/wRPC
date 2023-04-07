@@ -2,17 +2,16 @@ package com.wyn.demo;
 
 import com.wyn.api.TestServiceApi;
 import com.wyn.api.impl.TestServiceImpl;
-import com.wyn.provider.executors.ServerExecutor;
-import com.wyn.provider.invoker.ServiceInvoker;
-import com.wyn.provider.server.ServerRemoter;
+import com.wyn.provider.invoker.DefaultInvoker;
+import com.wyn.provider.server.DefaultServerRemoter;
 
 import java.io.IOException;
 
-public class ProvicerDemo {
+public class ProviderDemo {
     public static void main(String[] args) throws IOException {
-        ServiceInvoker proxy = ServiceInvoker.PROXY;
+        DefaultInvoker proxy = DefaultInvoker.PROXY;
         proxy.publish(TestServiceApi.class, new TestServiceImpl());
-        ServerRemoter remoter = new ServerRemoter();
+        DefaultServerRemoter remoter = new DefaultServerRemoter();
         remoter.startServer(9999);
     }
 }
